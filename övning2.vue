@@ -1,9 +1,9 @@
 <template>
   <div>
       <div class="buttons">
-      <button class="button-1" v-on:click="showSection(1)">Section-1</button>
-      <button class="button-2" v-on:click="showSection(2)">Section-2</button>
-      <button class="button-3" v-on:click="showSection(3)">Section-3</button>
+      <button v-on:click="showSection(1)"  v-bind:class="{active:knapp==1}">Section-1</button>
+      <button v-on:click="showSection(2)"  v-bind:class="{active:knapp==2}">Section-2</button>
+      <button v-on:click="showSection(3)" v-bind:class="{active:knapp==3}">Section-3</button>
       </div>
       <section v-if="knapp==1">Section-1 text :::Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores accusamus similique aliquam laudantium at suscipit ab consectetur, 
           quas perspiciatis a voluptate, enim ea vel? Eaque deserunt voluptatem veritatis tenetur.</section>
@@ -11,7 +11,6 @@
           quas perspiciatis a voluptate, enim ea vel? Eaque deserunt voluptatem veritatis tenetur.</section>
       <section v-else-if="knapp==3">Section-3 text :::Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet maiores accusamus similique aliquam laudantium at suscipit ab consectetur, 
           quas perspiciatis a voluptate, enim ea vel? Eaque deserunt voluptatem veritatis tenetur.</section>
-
   </div>
 </template>
 
@@ -40,5 +39,8 @@ export default {
  }
  .button-1{
      background-color: rgb(153, 137, 137);
+ }
+ .active{
+     background-color: seagreen;
  }
 </style>
